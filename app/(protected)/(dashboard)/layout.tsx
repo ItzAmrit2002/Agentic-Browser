@@ -1,6 +1,7 @@
 import { cookies } from "next/headers"
 
-import { AppSidebar, AppSidebarOpenTrigger } from "@/components/app-sidebar"
+import { AppSidebar } from "@/components/app-sidebar"
+import { AppSidebarOpenTrigger } from "@/components/app-sidebar-open-trigger"
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar"
 import { TooltipProvider } from "@/components/ui/tooltip"
 
@@ -21,7 +22,7 @@ export default async function DashboardLayout({
         style={{ "--sidebar-width": "20rem" } as React.CSSProperties}
       >
         <AppSidebar />
-        <SidebarInset className="min-h-0 overflow-hidden border !shadow-none">
+        <SidebarInset className="min-h-0 overflow-hidden border shadow-none! ">
           <AppSidebarOpenTrigger />
           {children}
         </SidebarInset>
